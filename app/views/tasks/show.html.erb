@@ -1,0 +1,15 @@
+<div class="title-btn">
+  <h1><%= @task.title %></h1>
+  <%= link_to "Edit this task", "/tasks/#{@task.id}/edit", class: "edit-btn" %>
+</div>
+
+
+<div class="details">
+  <p><%= @task.details %></p>
+</div>
+
+<%= check_box(@task.completed, @task, {checked: @task.completed}) %>
+<%=  @task.completed ? "This task is completed" : "This task is not completed yet" %>
+<br>
+<br>
+<%= link_to "Back to list", "/tasks" %>
