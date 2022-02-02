@@ -1,0 +1,8 @@
+<%= simple_form_for task, html: { class:"border-bottom pb-3 mb-3" } do |f| %>
+  <%= f.input :title, label: "Title" %>
+  <%= f.input :details, label: "Details" %>
+  <% if task.persisted? %>
+    <%= f.input :completed, label: "Completed", type: "checkbox" %>
+  <% end %>
+  <%= f.button :submit, class: "btn-primary mt-2" %>
+<% end %>
